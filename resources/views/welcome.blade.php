@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php
-(DB::connection()->getDatabaseName())
+if(DB::connection()->getDatabaseName())
 {
 echo "Yes! successfully connected to the DB: " . DB::connection()->getDatabaseName();
 }
