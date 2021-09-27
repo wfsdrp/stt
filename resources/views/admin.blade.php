@@ -1,6 +1,6 @@
 @extends('layout')
 @section('main_content')
-    <form class="form-group row" style="position: fixed; width: 500px; height: 200px; top: 50%; left: 50%; margin-top: -100px; /* Negative half of height. */ margin-left: -250px; /* Negative half of width. */">
+    <form method="get" action="/checkform" class="form-group row" style="position: fixed; width: 500px; height: 200px; top: 50%; left: 50%; margin-top: -100px; /* Negative half of height. */ margin-left: -250px; /* Negative half of width. */">
         <div class="text-center mb-4">
             <h1 class="h3 mb-3 font-weight-small">Админ Панель STT-STROI.RU</h1>
         </div>
