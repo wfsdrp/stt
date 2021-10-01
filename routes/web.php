@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,5 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('admin');
 });
+Route::post('/admin/checkAdmin', [MainController::class, 'checkAdmin']);
+
