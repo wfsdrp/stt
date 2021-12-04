@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +16,11 @@ use App\Http\Controllers\MainController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('login');
+})->name('main');
 Route::get('admin', function () {
-    return view('admin');
-});
-Route::post('admin', [MainController::class, 'checkAdmin']);
+    return view('home');
+})->middleware('auth');
+Route::post('login', [LoginController::class, 'login'])->name('login');
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
